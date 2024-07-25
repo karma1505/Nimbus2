@@ -1,4 +1,3 @@
-// InfiniteMovingCards.tsx
 "use client";
 import { cn } from "../lib/utils";
 import React, { useEffect, useRef, useState } from "react";
@@ -23,7 +22,7 @@ const InfiniteMovingCards: React.FC<TestimonialsProps> = ({
   const containerRef = useRef<HTMLDivElement>(null);
   const scrollerRef = useRef<HTMLUListElement>(null);
   const [isDuplicated, setIsDuplicated] = useState(false);
-  const [animationDirection, setAnimationDirection] = useState<"forwards" | "reverse">("forwards");
+  const [animationDirection, setAnimationDirection] = useState<"scrollLeft" | "scrollRight">("scrollLeft");
 
   useEffect(() => {
     if (!isDuplicated) {
@@ -32,7 +31,7 @@ const InfiniteMovingCards: React.FC<TestimonialsProps> = ({
     }
 
     const interval = setInterval(() => {
-      setAnimationDirection((prevDirection) => (prevDirection === "forwards" ? "reverse" : "forwards"));
+      setAnimationDirection((prevDirection) => (prevDirection === "scrollLeft" ? "scrollRight" : "scrollLeft"));
     }, 80000); // Interval in milliseconds (80 seconds)
 
     return () => clearInterval(interval);
@@ -60,7 +59,7 @@ const InfiniteMovingCards: React.FC<TestimonialsProps> = ({
         ref={scrollerRef}
         className={cn(
           "flex min-w-full gap-4 py-4 w-max flex-nowrap",
-          animationDirection === "forwards" ? "animate-left" : "animate-right"
+          animationDirection === "scrollLeft" ? "animate-scrollLeft" : "animate-scrollRight"
         )}
       >
         {items.map((item, idx) => (
