@@ -22,27 +22,28 @@ const InfiniteMovingCards: React.FC<TestimonialsProps> = ({
 }) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const scrollerRef = useRef<HTMLUListElement>(null);
+  const [isDuplicated, setIsDuplicated] = useState(false);
   const [animationDirection, setAnimationDirection] = useState<"forwards" | "reverse">("forwards");
 
   useEffect(() => {
-    addAnimation();
+    if (!isDuplicated) {
+      duplicateItems();
+      setIsDuplicated(true);
+    }
+
     const interval = setInterval(() => {
-      // Toggle animation direction
       setAnimationDirection((prevDirection) => (prevDirection === "forwards" ? "reverse" : "forwards"));
     }, 80000); // Interval in milliseconds (80 seconds)
 
     return () => clearInterval(interval);
-  }, []);
+  }, [isDuplicated]);
 
-  const addAnimation = () => {
+  const duplicateItems = () => {
     if (containerRef.current && scrollerRef.current) {
       const scrollerContent = Array.from(scrollerRef.current.children);
-
       scrollerContent.forEach((item) => {
         const duplicatedItem = item.cloneNode(true);
-        if (scrollerRef.current) {
-          scrollerRef.current.appendChild(duplicatedItem);
-        }
+        scrollerRef.current?.appendChild(duplicatedItem);
       });
     }
   };
@@ -58,13 +59,13 @@ const InfiniteMovingCards: React.FC<TestimonialsProps> = ({
       <ul
         ref={scrollerRef}
         className={cn(
-          "flex min-w-full gap-4 py-4 w-max flex-nowrap animate-scroll",
+          "flex min-w-full gap-4 py-4 w-max flex-nowrap",
           animationDirection === "forwards" ? "animate-left" : "animate-right"
         )}
       >
         {items.map((item, idx) => (
           <li
-            key={item.name}
+            key={idx}
             className="w-350 max-w-full relative rounded-2xl border border-b-0 flex-shrink-0 border-slate-700 px-8 py-6 md:w-450"
             style={{
               background: "linear-gradient(180deg, var(--slate-800), var(--slate-900))",

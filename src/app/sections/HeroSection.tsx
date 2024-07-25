@@ -4,7 +4,6 @@ import { motion } from 'framer-motion';
 import { cn } from '../lib/utils';
 import { Lamp } from '../components/Lamp'; // Import the Lamp component
 import Image from 'next/image';
-import { TypewriterEffect } from '../components/TypewriterEffect'; // Import the TypewriterEffect component
 
 const HeroSection: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false); // State to manage menu open/close
@@ -84,14 +83,10 @@ const HeroSection: React.FC = () => {
 
       <div className="flex-grow flex items-center justify-center">
         <div className="container mx-auto px-4 text-center">
-          <Image src="/svglogo.png" alt="Nimbus Inc. Logo" width={300} height={300} />
-          <TypewriterEffect
-            words={[{ text: "Welcome " },
-              {text: "To "},
-              {text: "Nimbus."}]}
-            className="text-4xl md:text-6xl font-bold mb-6"
-          />
-          <p className="text-lg md:text-xl mb-8">
+          <div className="flex justify-center">
+            <Image src="/svglogo.png" alt="Nimbus Inc. Logo" width={300} height={300} className="object-contain max-w-full h-auto" />
+          </div>
+          <p className="text-lg md:text-xl mb-8 mt-8">
             Elevate Your Online Presence: Tailored Websites, Strategic Ads, and SEO Excellence.
           </p>
           <button
