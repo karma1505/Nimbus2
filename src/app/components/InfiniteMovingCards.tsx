@@ -22,19 +22,12 @@ const InfiniteMovingCards: React.FC<TestimonialsProps> = ({
   const containerRef = useRef<HTMLDivElement>(null);
   const scrollerRef = useRef<HTMLUListElement>(null);
   const [isDuplicated, setIsDuplicated] = useState(false);
-  const [animationDirection, setAnimationDirection] = useState<"scrollLeft" | "scrollRight">("scrollLeft");
 
   useEffect(() => {
     if (!isDuplicated) {
       duplicateItems();
       setIsDuplicated(true);
     }
-
-    const interval = setInterval(() => {
-      setAnimationDirection((prevDirection) => (prevDirection === "scrollLeft" ? "scrollRight" : "scrollLeft"));
-    }, 80000); // Interval in milliseconds (80 seconds)
-
-    return () => clearInterval(interval);
   }, [isDuplicated]);
 
   const duplicateItems = () => {
@@ -59,15 +52,21 @@ const InfiniteMovingCards: React.FC<TestimonialsProps> = ({
         ref={scrollerRef}
         className={cn(
           "flex min-w-full gap-4 py-4 w-max flex-nowrap",
-          animationDirection === "scrollLeft" ? "animate-scrollLeft" : "animate-scrollRight"
+          direction === "left" ? "animate-scrollLeft" : "animate-scrollRight"
         )}
+        style={{
+          animationDuration: 'infinite', // Adjust the duration as needed
+          animationTimingFunction: 'linear',
+          animationIterationCount: 'infinite',
+        }}
       >
         {items.map((item, idx) => (
           <li
             key={idx}
-            className="w-350 max-w-full relative rounded-2xl border border-b-0 flex-shrink-0 border-slate-700 px-8 py-6 md:w-450"
+            className="w-72 max-w-full relative rounded-2xl border border-b-0 flex-shrink-0 border-slate-700 px-8 py-6"
             style={{
-              background: "linear-gradient(180deg, var(--slate-800), var(--slate-900))",
+              background: "linear-gradient(180deg, rgba(20, 20, 20, 0.8), rgba(30, 30, 30, 0.8))",
+              borderColor: "#444",
             }}
           >
             <blockquote>
@@ -75,15 +74,15 @@ const InfiniteMovingCards: React.FC<TestimonialsProps> = ({
                 aria-hidden="true"
                 className="user-select-none -z-1 pointer-events-none absolute -left-0.5 -top-0.5 h-[calc(100% + 4px)] w-[calc(100% + 4px)]"
               ></div>
-              <span className="text-sm leading-5 text-gray-100 font-normal relative z-20">
+              <span className="text-sm leading-5 text-gray-200 font-normal relative z-20 block">
                 {item.quote}
               </span>
               <div className="mt-6 flex flex-row items-center relative z-20">
                 <span className="flex flex-col gap-1">
-                  <span className="text-sm leading-5 text-gray-400 font-normal">
+                  <span className="text-sm leading-5 text-gray-300 font-normal">
                     {item.name}
                   </span>
-                  <span className="text-sm leading-5 text-gray-400 font-normal">
+                  <span className="text-sm leading-5 text-gray-300 font-normal">
                     {item.title}
                   </span>
                 </span>

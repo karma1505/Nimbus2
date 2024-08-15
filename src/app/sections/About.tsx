@@ -15,14 +15,14 @@ const AboutUs: React.FC = () => {
           <div>
             <h3 className="text-2xl font-semibold text-blue-600 mb-4">Our Mission</h3>
             <p className="text-white">
-              At Nimbus Inc., our mission is to empower businesses with innovative digital solutions. We believe in crafting exceptional websites, executing strategic marketing campaigns, and delivering robust SEO strategies that drive growth and success.
+              At Nimbus Tech. , our mission is to empower businesses & startups with innovative digital solutions. We believe in crafting exceptional websites, executing strategic ad campaigns, and delivering robust SEO strategies that drive growth and success for our clients.
             </p>
           </div>
 
           <div>
             <h3 className="text-2xl font-semibold text-blue-600 mb-4">Our Vision</h3>
             <p className="text-white">
-              Our vision is to be a leading force in the digital industry, known for our creativity, reliability, and dedication to client success. We envision a future where every business can thrive online with our tailored services and cutting-edge solutions.
+              Our vision is to be a leading force in the digital industry, known for our creativity, reliability, and dedication to client success. We envision a future where every business can thrive online with our tailored and best-in-class services.
             </p>
           </div>
         </div>

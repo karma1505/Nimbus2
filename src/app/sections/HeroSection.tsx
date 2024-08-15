@@ -53,7 +53,7 @@ const HeroSection: React.FC = () => {
     <section className={`bg-black text-white min-h-screen flex flex-col ${typeof window !== "undefined" && scrollPosition > window.innerHeight ? 'bg-blue-600' : 'bg-transparent'}`}>
       <nav className={`fixed top-0 left-0 w-full p-4 flex justify-between items-center z-50 bg-black bg-opacity-30 backdrop-blur-md ${typeof window !== "undefined" && scrollPosition > window.innerHeight ? 'bg-opacity-60' : 'bg-opacity-30'}`}>
         <div className="text-2xl font-bold cursor-pointer" onClick={scrollToTop}>
-          Nimbus Inc.
+          Nimbus Tech.
         </div>
         <div className="hidden md:flex space-x-6">
           <a href="#home" className="hover:text-blue-300" onClick={scrollToTop}>Home</a>
@@ -82,10 +82,11 @@ const HeroSection: React.FC = () => {
       <Lamp /> {/* Include Lamp component here */}
 
       <div className="flex-grow flex items-center justify-center">
-        <div className="container mx-auto px-4 text-center">
+        <div className="container mx-auto px-4 text-center"> {/* Added margin-top to move image higher */}
           <div className="flex justify-center">
-            <Image src="/svglogo.png" alt="Nimbus Inc. Logo" width={300} height={300} className="object-contain max-w-full h-auto" />
+            <Image src="/svglogo.png" alt="Nimbus Inc. Logo" width={200} height={200} className="object-contain max-w-full h-auto mb-36" />
           </div>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Welcome To Nimbus.</h2>
           <p className="text-lg md:text-xl mb-8 mt-8">
             Elevate Your Online Presence: Tailored Websites, Strategic Ads, and SEO Excellence.
           </p>
