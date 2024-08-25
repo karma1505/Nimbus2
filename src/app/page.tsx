@@ -1,24 +1,29 @@
-import Head from 'next/head';
+import { Metadata } from 'next';
 import HeroSection from '../app/sections/HeroSection';
 import Services from '../app/sections/Services';
 import AboutUs from './sections/About';
+import QualitySection from './sections/Quality';
+import Footer from './sections/Footer';
+import EnquiryPage from './sections/Enquiry';
+
+export const metadata: Metadata = {
+  title: 'Your Website | Home',
+  description: 'Your website description',
+  icons: {
+    icon: '/favicon.ico',
+  }, 
+};
 
 const Home: React.FC = () => {
   return (
-    <>
-      <Head>
-        <title>Your Website | Home</title>
-        <meta name="description" content="Your website description" />
-        <link rel="icon" href="/favicon.ico" />
-        <html lang="en" />
-      </Head>
-
-      <main>
-        <HeroSection />   
-        <Services />
-        <AboutUs />
-      </main>
-    </>
+    <main>
+      <HeroSection />
+      <Services />
+      <AboutUs />
+      <QualitySection />
+      <EnquiryPage />
+      <Footer />
+    </main>
   );
 };
 
