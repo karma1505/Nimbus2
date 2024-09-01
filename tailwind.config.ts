@@ -1,47 +1,49 @@
-import type { Config } from "tailwindcss";
+import type { Config } from 'tailwindcss';
 
-const colors = require("tailwindcss/colors");
-const { default: flattenColorPalette } = require("tailwindcss/lib/util/flattenColorPalette");
+const colors = require('tailwindcss/colors');
+const { default: flattenColorPalette } = require('tailwindcss/lib/util/flattenColorPalette');
 
 const addVariablesForColors = ({ addBase, theme }: any) => {
-  let allColors = flattenColorPalette(theme("colors"));
+  let allColors = flattenColorPalette(theme('colors'));
   let newVars = Object.fromEntries(
     Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
   );
 
   addBase({
-    ":root": newVars,
+    ':root': newVars,
   });
 };
 
 const config: Config = {
   content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
-  darkMode: "class",
+  darkMode: 'class',
   theme: {
     extend: {
       backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+        'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
       animation: {
-        scrollLeft:
-          "scrollLeft var(--animation-duration, 40s) linear infinite",
-        scrollRight:
-          "scrollRight var(--animation-duration, 40s) linear infinite",
+        'scroll-left': 'scrollLeft var(--animation-duration, 40s) linear infinite',
+        'scroll-right': 'scrollRight var(--animation-duration, 40s) linear infinite',
+        'spin-slow': 'spin-slow 30s linear infinite',
       },
       keyframes: {
         scrollLeft: {
-          from: { transform: "translateX(0)" },
-          to: { transform: "translateX(-100%)" },
+          from: { transform: 'translateX(0)' },
+          to: { transform: 'translateX(-100%)' },
         },
         scrollRight: {
-          from: { transform: "translateX(0)" },
-          to: { transform: "translateX(100%)" },
+          from: { transform: 'translateX(0)' },
+          to: { transform: 'translateX(100%)' },
+        },
+        'spin-slow': {
+          '0%': { transform: 'rotate(0deg)' },
+          '100%': { transform: 'rotate(360deg)' },
         },
       },
     },

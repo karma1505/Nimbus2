@@ -84,10 +84,12 @@ const EnquiryPage: React.FC = () => {
   return (
     <section className="bg-black text-white py-20 min-h-screen">
       <div className="max-w-4xl mx-auto px-4 lg:px-6">
-        <h2 className="text-4xl font-bold text-center mb-8">Enquiry Form</h2>
-        <p className="text-center mb-12 text-neutral-400">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 text-center">
+           Enquiry Form
+          </h2>
+          <p className="text-lg text-white text-center mb-10">
           Have a project in mind? Fill out the form below, and we will get back to you as soon as possible.
-        </p>
+          </p>
         <form onSubmit={handleSubmit} className="bg-neutral-900 p-8 rounded-lg shadow-lg">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
             <div className="flex flex-col">

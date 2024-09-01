@@ -36,9 +36,9 @@ export const WhyUsSection: React.FC = () => {
   ];
 
   return (
-    <section className="bg-black py-20">
+    <section className="bg-black py-4">
       <div className="max-w-6xl mx-auto px-4 lg:px-6">
-        <h2 className="text-2xl font-bold text-white text-center mb-12">
+        <h2 className="text-2xl  text-white text-center mb-12">
           Why Choose Us?
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">

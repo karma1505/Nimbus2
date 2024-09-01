@@ -6,6 +6,7 @@ import QualitySection from './sections/Quality';
 import Footer from './sections/Footer';
 import EnquiryPage from './sections/Enquiry';
 import Navbar from './components/Navbar'; // Import the Navbar component
+import FAQSection from './sections/FAQ';
 
 export const metadata: Metadata = {
   title: 'Nimbus Technologies',
@@ -24,6 +25,7 @@ const Home: React.FC = () => {
       <AboutUs />
       <QualitySection />
       <EnquiryPage />
+      <FAQSection />
       <Footer />
     </main>
   );

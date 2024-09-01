@@ -1,0 +1,14 @@
+# *
+User-agent: *
+Disallow: /api/
+Disallow: /private/
+
+# Googlebot
+User-agent: Googlebot
+Allow: /
+
+# Host
+Host: https://nimbustechnologies.in
+
+# Sitemaps
+Sitemap: https://nimbustechnologies.in/sitemap.xml
