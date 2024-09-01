@@ -6,8 +6,8 @@ import Testimonials from "../components/Testimonials";
 
 const Services: React.FC = () => {
   return (
-    <section className="bg-black py-20">
-      <div className="container mx-auto px-4">
+    <section className="bg-black py-20 overflow-hidden">
+      <div className="container mx-auto px-4 max-w-full">
         <motion.div
           className="max-w-4xl mx-auto text-center mb-12"
           initial={{ opacity: 0, y: 50 }}
@@ -31,7 +31,7 @@ const Services: React.FC = () => {
               color: "bg-blue-50",
               textColor: "text-blue-600",
               delay: 0.2,
-              link: "/Webdevelopment", // Link to the Webdevelopment page
+              link: "#", 
             },
             {
               title: "Digital Advertising & SEO",
@@ -40,7 +40,7 @@ const Services: React.FC = () => {
               color: "bg-green-50",
               textColor: "text-green-600",
               delay: 0.4,
-              link: "#", // Update with relevant link
+              link: "#", 
             },
             {
               title: "E-commerce Solutions",
@@ -49,7 +49,7 @@ const Services: React.FC = () => {
               color: "bg-purple-50",
               textColor: "text-purple-600",
               delay: 0.6,
-              link: "#", // Update with relevant link
+              link: "#", 
             },
           ].map((service, index) => (
             <Link href={service.link} key={index}>

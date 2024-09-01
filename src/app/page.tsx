@@ -5,10 +5,11 @@ import AboutUs from './sections/About';
 import QualitySection from './sections/Quality';
 import Footer from './sections/Footer';
 import EnquiryPage from './sections/Enquiry';
+import Navbar from './components/Navbar'; // Import the Navbar component
 
 export const metadata: Metadata = {
-  title: 'Your Website | Home',
-  description: 'Your website description',
+  title: 'Nimbus Technologies',
+  description: 'Your one stop destination for all your software development needs',
   icons: {
     icon: '/favicon.ico',
   }, 
@@ -17,6 +18,7 @@ export const metadata: Metadata = {
 const Home: React.FC = () => {
   return (
     <main>
+      <Navbar />
       <HeroSection />
       <Services />
       <AboutUs />

@@ -3,7 +3,7 @@
 import React from "react";
 import {
   IconBrandFacebook,
-  IconBrandTwitter,
+  IconBrandYoutube,
   IconBrandLinkedin,
   IconBrandInstagram,
 } from "@tabler/icons-react";
@@ -20,8 +20,15 @@ export const Footer: React.FC = () => {
             </p>
           </div>
           <div className="flex space-x-6 text-xl">
+          <a
+              href="https://www.instagram.com/nimbuswebdev/"
+              className="hover:text-blue-400 transition-colors"
+              aria-label="Instagram"
+            >
+              <IconBrandInstagram size={24} />
+            </a>
             <a
-              href="#"
+              href="https://www.facebook.com/profile.php?id=61558120499362"
               className="hover:text-blue-400 transition-colors"
               aria-label="Facebook"
             >
@@ -32,7 +39,7 @@ export const Footer: React.FC = () => {
               className="hover:text-blue-400 transition-colors"
               aria-label="Twitter"
             >
-              <IconBrandTwitter size={24} />
+              <IconBrandYoutube size={24} />
             </a>
             <a
               href="#"
@@ -40,13 +47,6 @@ export const Footer: React.FC = () => {
               aria-label="LinkedIn"
             >
               <IconBrandLinkedin size={24} />
-            </a>
-            <a
-              href="#"
-              className="hover:text-blue-400 transition-colors"
-              aria-label="Instagram"
-            >
-              <IconBrandInstagram size={24} />
             </a>
           </div>
         </div>
