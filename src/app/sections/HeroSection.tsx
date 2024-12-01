@@ -33,12 +33,12 @@ const HeroSection: React.FC = () => {
             Welcome To Nimbus.
           </h2>
           <p className="text-base md:text-xl mb-8 mt-8 relative z-30">
-            Elevate Your Online Presence: Tailored Websites, Strategic Ads, and SEO Excellence.
+          Transform Your Business: Custom Apps, Stunning Websites, and Powerful Software Solutions.
           </p>
           <div className="flex justify-center mt-8 relative z-30">
             <button
               onClick={scrollToServices}
-              className="bg-blue-500 hover:bg-blue-600 text-white py-3 px-6 rounded-md text-base md:text-lg font-semibold transition duration-300 flex items-center justify-center"
+              className="bg-blue-500 hover:bg-blue-600 text-white py-3 px-6 rounded-md text-base md:text-lg transition duration-300 flex items-center justify-center"
             >
               Get Started
               <IconTriangleInvertedFilled className="ml-2" size={18} />

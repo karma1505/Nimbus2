@@ -34,23 +34,24 @@ const Services: React.FC = () => {
               link: "#", 
             },
             {
-              title: "Digital Advertising & SEO",
+              title: "Android & iOS App Development",
               description:
-                "Enhance your online presence with strategic digital advertisement campaigns and search engine optimizations.",
+                "We will develop custom Android and iOS apps tailored to your business needs for a seamless user experience.",
               color: "bg-green-50",
               textColor: "text-green-600",
               delay: 0.4,
               link: "#", 
             },
             {
-              title: "E-commerce Solutions",
+              title: "Business Solutions From NimbusTech.",
               description:
-                "Build and optimize your e-commerce platform to drive sales and provide a seamless shopping experience.",
+                "Leverage our custom-built software solutions like NimbusSchedules™ to optimize your business processes and drive growth.",
               color: "bg-purple-50",
               textColor: "text-purple-600",
               delay: 0.6,
               link: "#", 
-            },
+            }
+            
           ].map((service, index) => (
             <Link href={service.link} key={index}>
               <motion.div
