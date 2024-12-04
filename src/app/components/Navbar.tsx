@@ -55,7 +55,14 @@ const Navbar = () => {
           <Link href="#about" onClick={toggleMenu} className="block text-white cursor-pointer hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-base font-medium">
             About
           </Link>
-          <Link href="#contact" onClick={toggleMenu} className="block text-white cursor-pointer hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-base font-medium">
+          <Link
+            href="#contact"
+            onClick={() => {
+              const contactSection = document.getElementById('contact');
+              contactSection?.scrollIntoView({ behavior: 'smooth', block: 'end' });
+            }}
+            className="scroll-smooth block text-white cursor-pointer hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-base font-medium"
+          >
             Contact
           </Link>
         </div>

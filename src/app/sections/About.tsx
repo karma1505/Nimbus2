@@ -3,7 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-const AboutUs: React.FC = () => {
+const About: React.FC = () => {
   return (
     <section className="bg-black py-20 overflow-hidden">
       <div className="container mx-auto px-4">
@@ -32,7 +32,8 @@ const AboutUs: React.FC = () => {
               Our Mission
             </h3>
             <p className="text-white">
-              At Nimbus Tech., our mission is to empower businesses & startups with innovative digital solutions. We believe in crafting exceptional websites, executing strategic ad campaigns, and delivering robust SEO strategies that drive growth and success for our clients.
+            At NimbusTech, our mission is to empower businesses and startups with innovative digital solutions.
+            We believe in building custom websites, developing mobile apps, and delivering tailored software solutions while keeping a customer centric approach.
             </p>
           </motion.div>
 
@@ -55,4 +56,4 @@ const AboutUs: React.FC = () => {
   );
 };
 
-export default AboutUs;
+export default About;

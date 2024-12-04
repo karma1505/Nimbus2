@@ -2,39 +2,49 @@
 
 import React, { useState } from 'react';
 import { motion, Variants } from 'framer-motion';
+import Link from 'next/link';
 
 interface FAQItem {
   question: string;
-  answer: string;
+  answer: React.ReactNode; // Update to accept JSX for links
 }
 
 const faqData: FAQItem[] = [
-    {
-      question: 'What Web Development Services Do You Offer?',
-      answer: 'We Provide Comprehensive Web Development Services Including Custom Website Design, Development, And Maintenance. Our Team Specializes In Creating Responsive And User-Friendly Websites Tailored To Your Business Needs.',
-    },
-    {
-      question: 'How Can SEO Improve My Website?',
-      answer: 'SEO (Search Engine Optimization) Helps Improve Your Website’s Visibility On Search Engines Like Google. By Optimizing Your Website’s Content And Structure, We Help Increase Organic Traffic, Improve Search Rankings, And Enhance User Experience.',
-    },
-    {
-      question: 'What Types Of Advertisements Do You Manage?',
-      answer: 'We Manage Various Types Of Advertisements Including Google Ads, Social Media Ads (Facebook, Instagram, LinkedIn), And Display Advertising. Our Goal Is To Create Effective Ad Campaigns That Drive Targeted Traffic And Generate Leads For Your Business.',
-    },
-    {
-      question: 'How Long Does It Take To See Results From SEO?',
-      answer: 'SEO Is A Long-Term Strategy And Results Can Vary Based On Factors Like Competition And Current Website Status. Generally, You Can Start Seeing Improvements In Search Rankings And Traffic Within 3 To 6 Months. We Provide Regular Updates And Reports To Track Progress.',
-    },
-    {
-      question: 'Can You Help With Website Redesigns?',
-      answer: 'Yes, We Offer Website Redesign Services To Refresh Your Existing Site. Whether You Need A Complete Overhaul Or Just Some Updates, We Work With You To Improve Design, Functionality, And Performance To Better Meet Your Business Goals.',
-    },
-    {
-      question: 'Do You Offer Ongoing Website Maintenance?',
-      answer: 'Absolutely. We Offer Ongoing Maintenance Services To Ensure Your Website Remains Up-To-Date, Secure, And Running Smoothly. Our Maintenance Packages Can Include Updates, Backups, Security Monitoring, And Performance Optimization.',
-    },
-  ];
+  {
+    question: 'What App Development Services Do You Offer?',
+    answer: 'We offer full-stack mobile app development services for both Android and iOS platforms. From custom app design to development and maintenance, we create mobile experiences tailored to your business needs, ensuring high performance and user engagement.',
+  },
+  {
+    question: 'How Can SEO Improve My Website or App?',
+    answer: 'SEO (Search Engine Optimization) helps improve the visibility of both websites and mobile apps on search engines and app stores. By optimizing your website’s content, structure, and app store listings, we increase organic traffic, enhance search rankings, and improve user engagement across platforms. This ensures that users can easily find your website or app, leading to higher conversions and better user experience.',
+  },
+  {
+    question: 'What Types Of Advertisements Do You Manage?',
+    answer: 'We manage various types of advertisements, including Google Ads, Meta Ads, and Social Media Ads (Facebook, Instagram). Our goal is to create effective ad campaigns that drive targeted traffic and generate leads for your business.',
+  },
+  {
+    question: 'Do You Offer Ongoing Support for Web and App Development?',
+    answer: 'Absolutely. We offer ongoing maintenance and support for both web and app development projects. Our team ensures that your app or website stays updated, secure, and runs smoothly, helping you to focus on growing your business.',
+  },
+  {
+    question: 'Can You Help With Website or App Redesigns?',
+    answer: 'Yes, we offer website and app redesign services to refresh your existing app or website. Whether you need a complete overhaul or just some updates, we work with you to improve design, functionality, and performance to better meet your business goals.',
+  },
+  {
+    question: 'Where can I subscribe for NimbusSchedules™?',
+    answer: (
+      <>
+        You can visit the NimbusSchedules™ website at{' '}
+        <Link href="https://www.nimbusschedules.com" className='text-blue-400'>
+        www.nimbusschedules.com
+        </Link>{' '}
+        to explore how it can help you.
+      </>
+    ),
+  }
   
+];
+
 const FAQSection: React.FC = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
@@ -60,12 +70,12 @@ const FAQSection: React.FC = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: 'easeOut' }}
       >
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 text-center">
-            Frequently Asked Questions
-          </h2>
-          <p className="text-xl text-white text-center mb-10 ">
-            Just To Clear Your Thought Process.
-          </p>
+        <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 text-center">
+          Frequently Asked Questions
+        </h2>
+        <p className="text-xl text-white text-center mb-10">
+          Just To Clear Your Thought Process.
+        </p>
         <div className="p-6 space-y-4">
           {faqData.map((item, index) => (
             <motion.div
@@ -79,6 +89,7 @@ const FAQSection: React.FC = () => {
               <div
                 onClick={() => toggleFAQ(index)}
                 className="w-full text-left px-4 py-3 flex justify-between items-center text-white cursor-pointer"
+                aria-expanded={openIndex === index ? 'true' : 'false'}
               >
                 <span>{item.question}</span>
                 <span className={`text-2xl ${openIndex === index ? 'rotate-45' : ''}`}>+</span>

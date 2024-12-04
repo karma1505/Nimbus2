@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import HeroSection from '../app/sections/HeroSection';
 import Services from '../app/sections/Services';
-import AboutUs from './sections/About';
+import About from './sections/About';
 import QualitySection from './sections/Quality';
 import Footer from './sections/Footer';
 import EnquiryPage from './sections/Enquiry';
@@ -22,7 +22,7 @@ const Home: React.FC = () => {
       <Navbar />
       <HeroSection />
       <Services />
-      <AboutUs />
+      <About />
       <QualitySection />
       <EnquiryPage />
       <FAQSection />

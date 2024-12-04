@@ -15,21 +15,21 @@ export const WhyUsSection: React.FC = () => {
     {
       title: "Tailored Solutions",
       description:
-        "At Nimbus, we understand that every business is unique, and we create custom websites that reflect your brand's identity.",
+        "At Nimbus, we understand that every business is unique, and we create custom websites and apps that reflect your brand's identity.",
       color: "bg-green-50",
       textColor: "text-green-600",
     },
     {
       title: "Cutting-Edge Technology",
       description:
-        "We leverage the latest technologies to build responsive, fast, and SEO-friendly websites that perform exceptionally well for all your needs.",
+        "We leverage the latest technologies to build responsive, fast, and SEO-friendly apps and websites that perform exceptionally well for all your needs.",
       color: "bg-purple-50",
       textColor: "text-purple-600",
     },
     {
       title: "Transparent Process",
       description:
-        "From planning to deployment, our process of creating your website is totally transparent, ensuring that you're always in the loop and satisfied with the progress.",
+        "From planning to deployment, our process of developing your digital solution is completely transparent, ensuring that you're always in the loop and satisfied with the progress",
       color: "bg-white",
       textColor: "text-yellow-600",
     },
