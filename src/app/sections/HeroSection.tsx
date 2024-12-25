@@ -16,8 +16,7 @@ const HeroSection: React.FC = () => {
 
   return (
     <section className="relative bg-black text-white min-h-screen flex flex-col overflow-hidden">
-              <Lamp />
-
+      <Lamp />
       <div className="flex-grow flex items-center justify-center relative z-20">
         <div className="container mx-auto px-4 text-center">
           <div className="flex justify-center mb-12 md:mb-36 relative z-30">
