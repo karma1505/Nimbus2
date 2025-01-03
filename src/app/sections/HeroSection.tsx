@@ -21,7 +21,7 @@ const HeroSection: React.FC = () => {
         <div className="container mx-auto px-4 text-center">
           <div className="flex justify-center mb-12 md:mb-36 relative z-30">
             <Image
-              src="/svglogo.png"
+              src="/logoupdate.png"
               alt="Nimbus Inc. Logo"
               width={200}
               height={200}

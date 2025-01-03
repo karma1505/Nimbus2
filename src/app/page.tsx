@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   title: 'Nimbus Technologies',
   description: 'Your one stop destination for all your software development needs',
   icons: {
-    icon: '/favicon.ico',
+    icon: '/logoupdate.ico',
   }, 
 };
 
