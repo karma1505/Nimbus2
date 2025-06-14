@@ -1,9 +1,7 @@
 "use client";
 
 import React from "react";
-import {
-  IconBrandInstagram,
-} from "@tabler/icons-react";
+import { IconBrandInstagram } from "@tabler/icons-react";
 
 export const Footer: React.FC = () => {
   return (
@@ -17,8 +15,10 @@ export const Footer: React.FC = () => {
             </p>
           </div>
           <div className="flex space-x-6 text-xl">
-          <a
+            <a
               href="https://www.instagram.com/nimbustech.india/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="hover:text-blue-400 transition-colors"
               aria-label="Instagram"
             >
@@ -29,16 +29,29 @@ export const Footer: React.FC = () => {
 
         <div className="flex flex-col md:flex-row justify-between text-sm text-neutral-400">
           <div className="text-center md:text-left mb-4 md:mb-0">
-            &copy; {new Date().getFullYear()} Nimbus Technologies All rights reserved.
+            &copy; {new Date().getFullYear()} Nimbus Technologies. All rights reserved.
           </div>
           <div className="flex space-x-4 justify-center md:justify-start">
-            <a href="#" className="hover:text-neutral-200 transition-colors">
+            <a 
+              href="/privacy-policy.pdf" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-neutral-200 transition-colors"
+            >
               Privacy Policy
             </a>
-            <a href="#" className="hover:text-neutral-200 transition-colors">
+            <a 
+              href="/terms-and-conditions.pdf" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-neutral-200 transition-colors"
+            >
               Terms of Service
             </a>
-            <a href="#" className="hover:text-neutral-200 transition-colors">
+            <a 
+              href="tel:+919999098900" 
+              className="hover:text-neutral-200 transition-colors"
+            >
               Contact Us
             </a>
           </div>
