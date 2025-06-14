@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 const About: React.FC = () => {
   return (
-    <section className="bg-black py-20 overflow-hidden">
+    <section id="about" className="bg-black py-20 overflow-hidden">
       <div className="container mx-auto px-4">
         <motion.div
           className="max-w-4xl mx-auto text-center mb-12"

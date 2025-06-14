@@ -34,11 +34,11 @@ const faqData: FAQItem[] = [
     question: 'Where can I subscribe for NimbusSchedules™?',
     answer: (
       <>
-        You can visit the NimbusSchedules™ website at{' '}
-        <Link href="https://www.nimbusschedules.com" className='text-blue-400'>
-        www.nimbusschedules.com
+        NimbusSchedules™ is still in development, but you can call us at{' '}
+        <Link href="tel:+919999098900" className="text-blue-500 hover:underline">
+          +91 9999098900
         </Link>{' '}
-        to explore how it can help you.
+        for more information. We will keep you updated on its launch.
       </>
     ),
   }

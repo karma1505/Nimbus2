@@ -2,9 +2,6 @@
 
 import React from "react";
 import {
-  IconBrandFacebook,
-  IconBrandYoutube,
-  IconBrandLinkedin,
   IconBrandInstagram,
 } from "@tabler/icons-react";
 
@@ -16,37 +13,16 @@ export const Footer: React.FC = () => {
           <div className="text-center md:text-left mb-6 md:mb-0">
             <h3 className="text-xl font-semibold mb-2">Nimbus Tech.</h3>
             <p className="text-sm">
-              Empowering businesses through custom web solutions.
+              Empowering businesses through powerful software solutions.
             </p>
           </div>
           <div className="flex space-x-6 text-xl">
           <a
-              href="https://www.instagram.com/nimbuswebdev/"
+              href="https://www.instagram.com/nimbustech.india/"
               className="hover:text-blue-400 transition-colors"
               aria-label="Instagram"
             >
               <IconBrandInstagram size={24} />
-            </a>
-            <a
-              href="https://www.facebook.com/profile.php?id=61558120499362"
-              className="hover:text-blue-400 transition-colors"
-              aria-label="Facebook"
-            >
-              <IconBrandFacebook size={24} />
-            </a>
-            <a
-              href="#"
-              className="hover:text-blue-400 transition-colors"
-              aria-label="Twitter"
-            >
-              <IconBrandYoutube size={24} />
-            </a>
-            <a
-              href="#"
-              className="hover:text-blue-400 transition-colors"
-              aria-label="LinkedIn"
-            >
-              <IconBrandLinkedin size={24} />
             </a>
           </div>
         </div>

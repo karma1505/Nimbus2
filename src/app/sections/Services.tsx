@@ -6,7 +6,7 @@ import Testimonials from "../components/Testimonials";
 
 const Services: React.FC = () => {
   return (
-    <section className="bg-black py-20 overflow-hidden">
+    <section id = "services" className="bg-black py-20 overflow-hidden">
       <div className="container mx-auto px-4 max-w-full">
         <motion.div
           className="max-w-4xl mx-auto text-center mb-12"

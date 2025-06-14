@@ -7,9 +7,9 @@ const testimonialsItems = [
     title: "Owner, Dilli House"
   },
   {
-    quote: "Excellent support.",
-    name: "Jane Smith",
-    title: "CTO"
+    quote: "Nimbus Technologies has been a game changer for our honey business. Their software solutions are top-notch and their support is exceptional.",
+    name: "Ekta Upadhyay",
+    title: "Founder, Just Honey"
   },
   {
     quote: "Great experience!",

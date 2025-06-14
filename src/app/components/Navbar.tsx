@@ -11,6 +11,17 @@ const Navbar = () => {
     setIsOpen(!isOpen);
   };
 
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'  // Aligns to top of viewport
+      });
+    }
+    setIsOpen(false);
+  };
+
   return (
     <nav className={`fixed top-0 left-0 w-full p-2 flex justify-between items-center z-50 bg-black bg-opacity-30 backdrop-blur-md ${typeof window !== "undefined" && window.scrollY > window.innerHeight ? 'bg-opacity-60' : 'bg-opacity-30'}`}>
       <div className="w-full px-4 sm:px-6 lg:px-8">
@@ -21,15 +32,21 @@ const Navbar = () => {
             </Link>
           </div>
           <div className="hidden md:flex md:space-x-8">
-            <Link href="#home" className="text-white cursor-pointer hover:text-gray-300">
+            <Link href="/" className="text-white cursor-pointer hover:text-gray-300">
               Home
             </Link>
-            <Link href="#services" className="text-white cursor-pointer hover:text-gray-300">
+                        <button 
+              onClick={() => scrollToSection('services')} 
+              className="text-white hover:text-gray-300"
+            >
               Services
-            </Link>
-            <Link href="#about" className="text-white cursor-pointer hover:text-gray-300">
+            </button>
+            <button 
+              onClick={() => scrollToSection('about')} 
+              className="text-white hover:text-gray-300"
+            >
               About
-            </Link>
+            </button>
             <Link href="#contact" className="text-white cursor-pointer hover:text-gray-300">
               Contact
             </Link>
