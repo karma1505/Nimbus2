@@ -16,7 +16,7 @@ const faqData: FAQItem[] = [
   },
   {
     question: 'How Can SEO Improve My Website or App?',
-    answer: `SEO (Search Engine Optimization) helps improve the visibility of both websites and mobile apps on search engines and app stores. By optimizing your website&apos;s content, structure, and app store listings, we increase organic traffic, enhance search rankings, and improve user engagement across platforms. This ensures that users can easily find your website or app, leading to higher conversions and better user experience.`,
+    answer: `SEO (Search Engine Optimization) helps improve the visibility of both websites and mobile apps on search engines and app stores. By optimizing your website's content, structure, and app store listings, we increase organic traffic, enhance search rankings, and improve user engagement across platforms. This ensures that users can easily find your website or app, leading to higher conversions and better user experience.`,
   },
   {
     question: 'What Types Of Advertisements Do You Manage?',

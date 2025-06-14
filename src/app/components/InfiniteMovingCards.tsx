@@ -57,7 +57,7 @@ const InfiniteMovingCards: React.FC<TestimonialsProps> = ({
           What Our Clients Say
         </h2>
         <p className="text-xl text-white">
-          Hear from businesses we've helped grow.
+          Hear from businesses we&apos;ve helped grow.
         </p>
       </motion.div>
 
