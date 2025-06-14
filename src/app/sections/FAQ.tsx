@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 interface FAQItem {
   question: string;
-  answer: React.ReactNode; // Update to accept JSX for links
+  answer: React.ReactNode;
 }
 
 const faqData: FAQItem[] = [
@@ -16,7 +16,7 @@ const faqData: FAQItem[] = [
   },
   {
     question: 'How Can SEO Improve My Website or App?',
-    answer: 'SEO (Search Engine Optimization) helps improve the visibility of both websites and mobile apps on search engines and app stores. By optimizing your website’s content, structure, and app store listings, we increase organic traffic, enhance search rankings, and improve user engagement across platforms. This ensures that users can easily find your website or app, leading to higher conversions and better user experience.',
+    answer: `SEO (Search Engine Optimization) helps improve the visibility of both websites and mobile apps on search engines and app stores. By optimizing your website's content, structure, and app store listings, we increase organic traffic, enhance search rankings, and improve user engagement across platforms. This ensures that users can easily find your website or app, leading to higher conversions and better user experience.`,
   },
   {
     question: 'What Types Of Advertisements Do You Manage?',
@@ -42,7 +42,6 @@ const faqData: FAQItem[] = [
       </>
     ),
   }
-  
 ];
 
 const FAQSection: React.FC = () => {
@@ -84,24 +83,28 @@ const FAQSection: React.FC = () => {
               initial="hidden"
               animate="visible"
               transition={{ duration: 0.3, ease: 'easeInOut' }}
-              className="bg-black"
+              className="bg-black border-b border-gray-800 pb-4"
             >
               <div
                 onClick={() => toggleFAQ(index)}
-                className="w-full text-left px-4 py-3 flex justify-between items-center text-white cursor-pointer"
-                aria-expanded={openIndex === index ? 'true' : 'false'}
+                className="w-full text-left flex justify-between items-center text-white cursor-pointer py-3"
               >
-                <span>{item.question}</span>
-                <span className={`text-2xl ${openIndex === index ? 'rotate-45' : ''}`}>+</span>
+                <h3 className="text-lg font-medium">{item.question}</h3>
+                <span className={`text-2xl transition-transform duration-200 ${openIndex === index ? 'rotate-45' : ''}`}>
+                  +
+                </span>
               </div>
               <motion.div
                 variants={itemVariants}
                 initial="hidden"
                 animate={openIndex === index ? 'visible' : 'hidden'}
                 transition={{ duration: 0.3, ease: 'easeInOut' }}
-                className="px-4 py-2"
+                className="overflow-hidden"
+                onClick={() => toggleFAQ(index)}
               >
-                {item.answer}
+                <div className="pt-2 pb-4 text-gray-300">
+                  {item.answer}
+                </div>
               </motion.div>
             </motion.div>
           ))}
