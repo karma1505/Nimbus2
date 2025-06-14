@@ -6,7 +6,7 @@ import Testimonials from "../components/Testimonials";
 
 const Services: React.FC = () => {
   return (
-    <section id = "services" className="bg-black py-20 overflow-hidden">
+    <section id="services" className="bg-black py-20 overflow-hidden">
       <div className="container mx-auto px-4 max-w-full">
         <motion.div
           className="max-w-4xl mx-auto text-center mb-12"
@@ -30,7 +30,7 @@ const Services: React.FC = () => {
                 "We create stunning websites tailored to your brand with modern design principles and robust functionality.",
               color: "bg-blue-50",
               textColor: "text-blue-600",
-              delay: 0.2,
+              delay: 0.1,
               link: "#", 
             },
             {
@@ -39,7 +39,7 @@ const Services: React.FC = () => {
                 "We will develop custom Android and iOS apps tailored to your business needs for a seamless user experience.",
               color: "bg-green-50",
               textColor: "text-green-600",
-              delay: 0.4,
+              delay: 0.1,
               link: "#", 
             },
             {
@@ -48,18 +48,21 @@ const Services: React.FC = () => {
                 "Leverage our custom-built software solutions like NimbusSchedules™ to optimize your business processes and drive growth.",
               color: "bg-purple-50",
               textColor: "text-purple-600",
-              delay: 0.6,
+              delay: 0.1,
               link: "#", 
             }
-            
           ].map((service, index) => (
             <Link href={service.link} key={index}>
               <motion.div
                 className={`${service.color} p-6 rounded-lg shadow-md cursor-pointer`}
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
+                whileHover={{ 
+                  scale: 1.05,
+                  transition: { duration: 0.1 }
+                }}
                 transition={{
-                  duration: 0.6,
+                  duration: 0.3,
                   ease: "easeOut",
                   delay: service.delay,
                 }}
@@ -79,7 +82,7 @@ const Services: React.FC = () => {
           className="mt-12"
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6, ease: "easeOut", delay: 0.8 }}
+          transition={{ duration: 0.2, ease: "easeOut", delay: 0.3 }}
         >
           <Testimonials />
         </motion.div>
