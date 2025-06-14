@@ -38,7 +38,7 @@ export const WhyUsSection: React.FC = () => {
   return (
     <section className="bg-black py-4">
       <div className="max-w-6xl mx-auto px-4 lg:px-6">
-        <h2 className="text-2xl  text-white text-center mb-12">
+        <h2 className="text-2xl text-white text-center mb-12">
           Why Choose Us?
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
@@ -48,13 +48,14 @@ export const WhyUsSection: React.FC = () => {
               className={cn(
                 `${point.color} p-6 rounded-lg shadow-md`,
                 "transition-transform transform hover:scale-105",
-                "h-56 w-full"
+                "min-h-[224px] h-auto", // Changed from fixed height to min-height
+                "flex flex-col" // Added flex layout
               )}
             >
               <h3 className={`text-lg font-semibold mb-3 ${point.textColor}`}>
                 {point.title}
               </h3>
-              <p className="text-gray-700 overflow-hidden text-ellipsis">
+              <p className="text-gray-700 text-sm md:text-base"> {/* Added responsive text size */}
                 {point.description}
               </p>
             </div>
