@@ -2,16 +2,13 @@
 import React, { useRef } from "react";
 import Image from "next/image";
 import { IconTriangleInvertedFilled } from "@tabler/icons-react";
-import { Lamp } from "../components/Lamp"; // Import the Lamp component
+import { Lamp } from "../components/Lamp";
 
 const HeroSection: React.FC = () => {
   const servicesRef = useRef<HTMLDivElement>(null);
-  const aboutRef = useRef<HTMLDivElement>(null);
 
   const scrollToServices = () => {
-    if (servicesRef.current) {
-      servicesRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
+    servicesRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
   return (
@@ -19,20 +16,12 @@ const HeroSection: React.FC = () => {
       <Lamp />
       <div className="flex-grow flex items-center justify-center relative z-20">
         <div className="container mx-auto px-4 text-center">
-          <div className="flex justify-center mb-12 md:mb-36 relative z-30">
-            <Image
-              src="/logoupdate.png"
-              alt="Nimbus Inc. Logo"
-              width={200}
-              height={200}
-              className="object-contain max-w-full h-auto"
-            />
-          </div>
+          {/* Modified logo container */}
           <h2 className="text-3xl md:text-5xl font-bold text-white mb-4 relative z-30">
             Welcome To Nimbus.
           </h2>
           <p className="text-base md:text-xl mb-8 mt-8 relative z-30">
-          Transform Your Business: Custom Apps, Stunning Websites, and Powerful Software Solutions.
+            Transform Your Business: Custom Apps, Stunning Websites, and Powerful Software Solutions.
           </p>
           <div className="flex justify-center mt-8 relative z-30">
             <button
@@ -46,7 +35,6 @@ const HeroSection: React.FC = () => {
         </div>
       </div>
 
-      <div ref={aboutRef} id="about" />
       <div ref={servicesRef} id="services" />
     </section>
   );
