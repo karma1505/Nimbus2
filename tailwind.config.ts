@@ -31,6 +31,8 @@ const config: Config = {
         'scroll-left': 'scrollLeft var(--animation-duration, 40s) linear infinite',
         'scroll-right': 'scrollRight var(--animation-duration, 40s) linear infinite',
         'spin-slow': 'spin-slow 30s linear infinite',
+        'infinite-scroll': 'infinite-scroll 25s linear infinite',
+        'infinite-scroll-reverse': 'infinite-scroll-reverse 25s linear infinite',
       },
       keyframes: {
         scrollLeft: {
@@ -44,6 +46,14 @@ const config: Config = {
         'spin-slow': {
           '0%': { transform: 'rotate(0deg)' },
           '100%': { transform: 'rotate(360deg)' },
+        },
+        'infinite-scroll': {
+          from: { transform: 'translateX(0)' },
+          to: { transform: 'translateX(-50%)' },
+        },
+        'infinite-scroll-reverse': {
+          from: { transform: 'translateX(-50%)' },
+          to: { transform: 'translateX(0)' },
         },
       },
     },
