@@ -8,7 +8,6 @@ const WebDevelopmentServices: React.FC = () => {
 
   const handleBackToServices = () => {
     router.push('/');
-    // Small delay to ensure navigation completes before scrolling
     setTimeout(() => {
       const servicesSection = document.getElementById('services');
       if (servicesSection) {
@@ -58,14 +57,6 @@ const WebDevelopmentServices: React.FC = () => {
               color: "bg-green-50",
               textColor: "text-green-600",
               delay: 0.4,
-            },
-            {
-              title: "Content Management Systems (CMS)",
-              description:
-                "Empower your team with easy-to-manage websites using popular CMS platforms like WordPress and custom-built solutions.",
-              color: "bg-purple-50",
-              textColor: "text-purple-600",
-              delay: 0.6,
             },
             {
               title: "E-commerce Development",
