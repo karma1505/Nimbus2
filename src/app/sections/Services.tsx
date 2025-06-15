@@ -31,7 +31,7 @@ const Services: React.FC = () => {
               color: "bg-blue-50",
               textColor: "text-blue-600",
               delay: 0.1,
-              link: "#", 
+              link: "/web-development", 
             },
             {
               title: "Android & iOS App Development",

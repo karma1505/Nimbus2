@@ -1,11 +1,31 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
+import { useRouter } from "next/navigation";
 
 const WebDevelopmentServices: React.FC = () => {
+  const router = useRouter();
+
+  const handleBackToServices = () => {
+    router.push('/');
+    // Small delay to ensure navigation completes before scrolling
+    setTimeout(() => {
+      const servicesSection = document.getElementById('services');
+      if (servicesSection) {
+        servicesSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 100);
+  };
+
   return (
-    <section className="bg-black py-20">
+    <section id ='web-development' className="bg-black py-20">
       <div className="container mx-auto px-4">
+        <button 
+          onClick={handleBackToServices}
+          className="text-white mb-8 inline-block hover:underline cursor-pointer"
+        >
+          ← Back to All Services
+        </button>
         <motion.div
           className="max-w-4xl mx-auto text-center mb-12"
           initial={{ opacity: 0, y: 50 }}

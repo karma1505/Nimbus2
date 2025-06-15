@@ -5,7 +5,7 @@ import About from './sections/About';
 import QualitySection from './sections/Quality';
 import Footer from './sections/Footer';
 import EnquiryPage from './sections/Enquiry';
-import Navbar from './components/Navbar'; // Import the Navbar component
+import Navbar from './components/Navbar';
 import FAQSection from './sections/FAQ';
 
 export const metadata: Metadata = {
