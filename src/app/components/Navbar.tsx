@@ -35,7 +35,7 @@ const Navbar = () => {
             <Link href="/" className="text-white cursor-pointer hover:text-gray-300">
               Home
             </Link>
-                        <button 
+            <button 
               onClick={() => scrollToSection('services')} 
               className="text-white hover:text-gray-300"
             >
@@ -47,9 +47,12 @@ const Navbar = () => {
             >
               About
             </button>
-            <Link href="#contact" className="text-white cursor-pointer hover:text-gray-300">
+            <button 
+              onClick={() => scrollToSection('footer')} 
+              className="text-white hover:text-gray-300"
+            >
               Contact
-            </Link>
+            </button>
           </div>
           <div className="-mr-2 flex md:hidden">
             <button
@@ -63,25 +66,45 @@ const Navbar = () => {
       </div>
       <div className={`md:hidden ${isOpen ? 'block' : 'hidden'}`}>
         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-          <Link href="#home" onClick={toggleMenu} className="block text-white cursor-pointer hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-base font-medium">
+          <Link href="/" onClick={toggleMenu} className="block text-white cursor-pointer hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-base font-medium">
             Home
           </Link>
-          <Link href="#services" onClick={toggleMenu} className="block text-white cursor-pointer hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-base font-medium">
+          <a
+            href="#services"
+            onClick={(e) => {
+              e.preventDefault();
+              document.getElementById('services')?.scrollIntoView({ 
+                behavior: 'smooth'
+              });
+            }}
+            className="scroll-smooth block text-white cursor-pointer hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-base font-medium"
+          >
             Services
-          </Link>
-          <Link href="#about" onClick={toggleMenu} className="block text-white cursor-pointer hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-base font-medium">
+          </a>
+          <a
+            href="#about"
+            onClick={(e) => {
+              e.preventDefault();
+              document.getElementById('about')?.scrollIntoView({ 
+                behavior: 'smooth'
+              });
+            }}
+            className="scroll-smooth block text-white cursor-pointer hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-base font-medium"
+          >
             About
-          </Link>
-          <Link
-            href="#contact"
-            onClick={() => {
-              const contactSection = document.getElementById('contact');
-              contactSection?.scrollIntoView({ behavior: 'smooth', block: 'end' });
+          </a>
+          <a
+            href="#footer"
+            onClick={(e) => {
+              e.preventDefault();
+              document.getElementById('footer')?.scrollIntoView({ 
+                behavior: 'smooth'
+              });
             }}
             className="scroll-smooth block text-white cursor-pointer hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-base font-medium"
           >
             Contact
-          </Link>
+          </a>
         </div>
       </div>
     </nav>

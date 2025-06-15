@@ -5,7 +5,7 @@ import { IconBrandInstagram } from "@tabler/icons-react";
 
 export const Footer: React.FC = () => {
   return (
-    <footer className="bg-neutral-900 text-white py-10">
+    <footer id="footer" className="bg-neutral-900 text-white py-10">
       <div className="max-w-6xl mx-auto px-4 lg:px-6">
         <div className="flex flex-col md:flex-row justify-between items-center border-b border-neutral-700 pb-8 mb-8">
           <div className="text-center md:text-left mb-6 md:mb-0">
