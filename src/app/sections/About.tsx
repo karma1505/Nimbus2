@@ -14,7 +14,7 @@ const About: React.FC = () => {
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            About Us
+            About Nimbus Technologies
           </h2>
           <p className="text-xl text-white">
             Discover who we are and what drives us.
@@ -32,8 +32,9 @@ const About: React.FC = () => {
               Our Mission
             </h3>
             <p className="text-white">
-            At NimbusTech, our mission is to empower businesses and startups with innovative digital solutions.
-            We believe in building custom websites, developing mobile apps, and delivering tailored software solutions while keeping a customer centric approach.
+            At Nimbus Technologies, our mission is to empower businesses with innovative digital solutions. 
+            We specialize in custom software development, web design, mobile app development, and tailored business solutions. 
+            We serve clients worldwide with cutting-edge technology solutions that drive business growth and success.
             </p>
           </motion.div>
 
@@ -47,7 +48,9 @@ const About: React.FC = () => {
               Our Vision
             </h3>
             <p className="text-white">
-              Our vision is to be a leading force in the digital industry, known for our creativity, reliability, and dedication to client success. We envision a future where every business can thrive online with our tailored and best-in-class services.
+              Our vision is to be a leading force in the digital industry, known for our creativity, reliability, 
+              and dedication to client success. We envision a future where every business can thrive online with our 
+              tailored and best-in-class custom software development services.
             </p>
           </motion.div>
         </div>

@@ -31,10 +31,10 @@ const faqData: FAQItem[] = [
     answer: 'Yes, we offer website and app redesign services to refresh your existing app or website. Whether you need a complete overhaul or just some updates, we work with you to improve design, functionality, and performance to better meet your business goals.',
   },
   {
-    question: 'Where can I subscribe for NimbusSchedules™?',
+    question: 'Where can I subscribe for PitStop?',
     answer: (
       <>
-        NimbusSchedules™ is still in development, but you can call us at{' '}
+        PitStop™ is still in development, but you can call us at{' '}
         <Link href="tel:+919999098900" className="text-blue-500 hover:underline">
           +91 9999098900
         </Link>{' '}

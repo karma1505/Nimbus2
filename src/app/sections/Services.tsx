@@ -45,7 +45,7 @@ const Services: React.FC = () => {
             {
               title: "Business Solutions From NimbusTech.",
               description:
-                "Leverage our custom-built software solutions like NimbusSchedules™ to optimize your business processes and drive growth.",
+                "Leverage our custom-built Garage Management System, PitStop™ to optimize your garage business processes and drive growth.",
               color: "bg-purple-50",
               textColor: "text-purple-600",
               delay: 0.1,

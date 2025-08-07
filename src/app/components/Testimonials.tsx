@@ -2,19 +2,14 @@ import InfiniteMovingCards from '../components/InfiniteMovingCards';
 
 const testimonialsItems = [
   {
-    quote: "I had my hotel website created with Nimbus along with their SEO service. I must say, they really went ahead and were dedicated towards the project and benefit my business",
-    name: "Aryan Kumar",
-    title: "Owner, Dilli House"
-  },
-  {
     quote: "Nimbus Technologies has been a game changer for our honey business. Their software solutions are top-notch and their support is exceptional.",
     name: "Ekta Upadhyay",
-    title: "Founder, Just Honey"
+    title: "Founder, JustHoney"
   },
   {
-    quote: "Great experience!",
-    name: "Emily Davis",
-    title: "COO"
+    quote: "Nimbus Technologies built me the MVP for my first invenstment round within 30 days. Super work! 😃",
+    name: "Rohit Pawar",
+    title: "Founder & CEO, GRETA-1"
   },
 ];
 
