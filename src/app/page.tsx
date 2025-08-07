@@ -9,8 +9,8 @@ import Navbar from './components/Navbar';
 import FAQSection from './sections/FAQ';
 
 export const metadata: Metadata = {
-  title: 'Nimbus Technologies - Custom Software Development & Web Design Services',
-  description: 'Transform your business with Nimbus Technologies. We offer custom software development, web design, mobile app development, and tailored business solutions. Get innovative technology solutions that drive growth.',
+  title: 'Nimbus Technologies - Software Development & Web Design',
+  description: 'Transform your business with Nimbus Technologies. Custom software development, web design, and mobile app development services that drive growth.',
   keywords: [
     'custom software development company',
     'web design and development services',
@@ -42,9 +42,6 @@ export const metadata: Metadata = {
     title: 'Nimbus Technologies - Custom Software Development & Web Solutions',
     description: 'Transform your business with innovative software solutions.',
     images: ['/homepage-twitter.jpg'],
-  },
-  alternates: {
-    canonical: 'https://nimbustechnologies.in',
   },
 };
 

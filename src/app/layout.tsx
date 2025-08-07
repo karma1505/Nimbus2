@@ -41,14 +41,14 @@ export const metadata: Metadata = {
   },
   metadataBase: new URL('https://nimbustechnologies.in'),
   alternates: {
-    canonical: '/',
+    canonical: 'https://nimbustechnologies.in',
   },
   openGraph: {
     type: 'website',
     locale: 'en_US',
     url: 'https://nimbustechnologies.in',
     siteName: 'Nimbus Technologies',
-    title: 'Nimbus Technologies - Custom Software Development & Web Design Services',
+    title: 'Nimbus Technologies - Software Development & Web Design',
     description: 'Transform your business with custom software development, web design, and mobile app development services from Nimbus Technologies.',
     images: [
       {

@@ -39,7 +39,7 @@ const Navbar = () => {
               onClick={() => scrollToSection('services')} 
               className="text-white hover:text-gray-300"
             >
-              Services
+              Our Services
             </button>
             <button 
               onClick={() => scrollToSection('about')} 
@@ -51,7 +51,7 @@ const Navbar = () => {
               onClick={() => scrollToSection('footer')} 
               className="text-white hover:text-gray-300"
             >
-              Contact
+              Contact Us
             </button>
           </div>
           <div className="-mr-2 flex md:hidden">
