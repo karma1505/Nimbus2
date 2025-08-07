@@ -9,11 +9,43 @@ import Navbar from './components/Navbar';
 import FAQSection from './sections/FAQ';
 
 export const metadata: Metadata = {
-  title: 'Nimbus Technologies',
-  description: 'Your one stop destination for all your software development needs',
-  icons: {
-    icon: '/logoupdate.ico',
-  }, 
+  title: 'Nimbus Technologies - Custom Software Development & Web Design Services',
+  description: 'Transform your business with Nimbus Technologies. We offer custom software development, web design, mobile app development, and tailored business solutions. Get innovative technology solutions that drive growth.',
+  keywords: [
+    'custom software development company',
+    'web design and development services',
+    'mobile app development company',
+    'custom business software solutions',
+    'Nimbus Technologies',
+    'custom website development',
+    'Android iOS app development',
+    'business process optimization'
+  ],
+  openGraph: {
+    title: 'Nimbus Technologies - Custom Software Development & Web Solutions',
+    description: 'Transform your business with innovative software solutions. Custom web development, mobile apps, and digital transformation services.',
+    url: 'https://nimbustechnologies.in',
+    siteName: 'Nimbus Technologies',
+    images: [
+      {
+        url: '/homepage-og.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Nimbus Technologies - Software Development Services',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Nimbus Technologies - Custom Software Development & Web Solutions',
+    description: 'Transform your business with innovative software solutions.',
+    images: ['/homepage-twitter.jpg'],
+  },
+  alternates: {
+    canonical: 'https://nimbustechnologies.in',
+  },
 };
 
 const Home: React.FC = () => {

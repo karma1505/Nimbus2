@@ -1,12 +1,34 @@
-"use client";
 import React from "react";
 import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
 import Navbar from "../components/Navbar";
 import Footer from "../sections/Footer";
+import Breadcrumbs from "../components/Breadcrumbs";
 
 const AppDevelopmentServices: React.FC = () => {
   const router = useRouter();
+
+  // Service structured data
+  const serviceStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Mobile App Development Services",
+    "description": "Professional mobile app development services including iOS, Android, and cross-platform development.",
+    "provider": {
+      "@type": "Organization",
+      "name": "Nimbus Technologies Private Limited",
+      "url": "https://nimbustechnologies.in"
+    },
+    "areaServed": {
+      "@type": "Country",
+      "name": "India"
+    },
+    "serviceType": "Mobile App Development",
+    "offers": {
+      "@type": "Offer",
+      "availability": "https://schema.org/InStock"
+    }
+  };
 
   const handleBackToServices = () => {
     router.push('/');
@@ -20,9 +42,24 @@ const AppDevelopmentServices: React.FC = () => {
 
   return (
     <div className="min-h-screen flex flex-col bg-black">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(serviceStructuredData),
+        }}
+      />
       <Navbar />
       
       <main className="flex-grow mb-40">
+        <div className="container mx-auto px-4 pt-20">
+          <Breadcrumbs 
+            items={[
+              { label: 'Home', href: '/' },
+              { label: 'Services', href: '/#services' },
+              { label: 'Mobile App Development' }
+            ]} 
+          />
+        </div>
         <section id='app-development' className="py-20">
           <div className="container mx-auto px-4">
             <button 

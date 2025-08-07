@@ -1,10 +1,17 @@
-# *
 User-agent: *
+Allow: /
+
+# Block admin and private areas
 Disallow: /api/
 Disallow: /private/
+Disallow: /admin/
 
-# Googlebot
+# Allow Googlebot full access
 User-agent: Googlebot
+Allow: /
+
+# Allow Googlebot-Image
+User-agent: Googlebot-Image
 Allow: /
 
 # Host
@@ -12,3 +19,4 @@ Host: https://nimbustechnologies.in
 
 # Sitemaps
 Sitemap: https://nimbustechnologies.in/sitemap.xml
+Sitemap: https://nimbustechnologies.in/sitemap-0.xml
